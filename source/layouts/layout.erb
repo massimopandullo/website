@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Massimo Pandullo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Massimo Pandullo</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#one"><%= dato.cosa_faccio.title %></a></li>
+						<li><a href="#two"><%= dato.chi_sono.title %></a></li>
+						<li><a href="#work"><%= dato.lavori.title %></a></li>
+						<li><a href="#contact"><%= dato.contattami.title %></a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen" style="background: url('images/overlay.png'), url('<%= dato.home.image.url %>')">
+				<div class="content">
+					<header>
+						<h2><%= dato.home.title %></h2>
+					</header>
+					<div class="text-shadow">
+            <%= dato.home.description %>
+					</div>
+					<footer>
+						<a href="#one" class="button style2 down">Prosegui</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen" style="background: url('images/overlay.png'), url('<%= dato.cosa_faccio.image.url %>')">
+				<div class="content box style2">
+					<header>
+						<h2><%= dato.cosa_faccio.title %></h2>
+					</header>
+          <%= dato.cosa_faccio.description %>
+				</div>
+				<a href="#two" class="button style2 down anchored">Prosegui</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen" style="background: url('images/overlay.png'), url('<%= dato.chi_sono.image.url %>')">
+				<div class="content box style2">
+					<header>
+						<h2><%= dato.chi_sono.title %></h2>
+					</header>
+          <%= dato.chi_sono.description %>
+				</div>
+				<a href="#work" class="button style2 down anchored">Prosegui</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2><%= dato.lavori.title %></h2>
+						<%= dato.lavori.description %>
+					</header>
+
+					<!-- Gallery  -->
+						<div class="gallery">
+              <% dato.lavori.lista_lavori.each_with_index do |lavoro, index| %>
+                <% article_class = index.even? ? "from-left" : "from-right" %>
+                <article class="<%= article_class %>">
+  								<a href="<%= lavoro.image.url %>" class="image fit"><img src="<%= lavoro.image.url(fit: 'crop', w: 440, h: 276) %>" title="<%= lavoro.description %>" alt="" /></a>
+  							</article>
+              <% end %>
+						</div>
+
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2><%= dato.contattami.title %></h2>
+            <p><%= dato.contattami.description %></p>
+						<p class="icon-text">
+							<i class="icon fa-phone">
+								<%= dato.contattami.phone %>
+							</i>
+						</p>
+						<ul class="actions">
+              <% dato.contattami.lista_social.each do |social| %>
+				        <li><a href="<%= social.url %>" title="<%= social.provider %>" class="icon fa-<%= social.icon %>"><span class="label"><%= social.provider %></span></a></li>
+              <% end %>
+						</ul>
+					</header>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it" target="_blank">CC BY-NC-SA 4</a> Massimo Pandullo</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>With ❤️ by <a href="https://olisti.co">@olistik</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

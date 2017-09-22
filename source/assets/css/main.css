@@ -1795,6 +1795,7 @@
 		}
 
 			.main.style1 h2 {
+				text-shadow: 0px 0px 1px #444;
 				font-size: 4.25em;
 				line-height: 1em;
 			}
@@ -2093,7 +2094,6 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2155,4 +2155,12 @@
 p.icon-text a {
 	font-size: 1.25em;
 	line-height: 1.25em;
+}
+
+.text-shadow {
+	text-shadow: 1px 1px 1px black;
+}
+
+.text-border {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
