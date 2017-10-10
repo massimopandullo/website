@@ -27,7 +27,6 @@
 		}
 
 		&.style1 {
-			@include vendor('align-items', 'center');
 			@include vendor('justify-content', 'center');
 			text-align: center;
 			padding: 3em 0 3em 0;
@@ -51,7 +50,6 @@
 
 		&.style2 {
 			@include vendor('align-items', 'center');
-			@include vendor('justify-content', 'center');
 			padding: 3em 0 3em 0;
 			overflow: hidden;
 
@@ -118,7 +116,7 @@
 				}
 
 				&.down {
-					background-image: url('images/dark-arrow.svg');
+					background-image: url('/images/dark-arrow.svg');
 				}
 			}
 		}

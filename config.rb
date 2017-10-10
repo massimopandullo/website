@@ -1,6 +1,9 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+require "lib/position_class"
+helpers PositionClass
+
 activate :dato, live_reload: true
 
 # enable livereload on development

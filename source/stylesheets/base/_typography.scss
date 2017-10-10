@@ -47,6 +47,23 @@
 		}
 	}
 
+	.intro-title {
+		font-family: _font(family-title);
+	}
+
+	.text-border {
+		text-shadow: -1px 0 _palette(fg), 0 1px _palette(fg), 1px 0 _palette(fg), 0 -1px _palette(fg);
+	}
+
+	.text-shadow {
+		text-shadow: 1px 1px 1px _palette(fg);
+	}
+
+	p.icon-text i {
+		font-size: 1.25em;
+		line-height: 1.25em;
+	}
+
 	h2 {
 		font-size: 2.25em;
 		line-height: 1.25em;

@@ -5,8 +5,8 @@
 
 // Duration.
 	$duration: (
-		transition:			0.2s,
-		fade-in:			1s
+		transition:			0.1s,
+		fade-in:			0.5s
 	);
 
 // Size.
@@ -17,13 +17,14 @@
 // Font.
 	$font: (
 		family:				('Source Sans Pro', 'sans-serif'),
+		family-title:				('Caveat', 'cursive', 'sans-serif'),
 		weight:				300,
 		weight-bold:		900
 	);
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
+		bg:					#e8e8e8,
 		bg-alt:				#f5f6f7,
 		fg:					#39454b,
 		fg-bold:			#39454b,

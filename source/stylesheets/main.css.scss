@@ -3,6 +3,7 @@
 @import 'libs/mixins';
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url('font-awesome.min.css');
 
 /*
@@ -53,30 +54,11 @@
 
 /* Intro */
 
-	#intro {
-		background: url('images/overlay.png'), url('../../images/intro.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
-
-/* One */
-
-	#one {
-		background: url('images/overlay.png'), url('../../images/one.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
-
-/* Two */
-
-	#two {
-		background: url('images/overlay.png'), url('../../images/two.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+	.background-cover {
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: bottom center;
+		background-repeat: no-repeat;
 	}
 
 /* Contact */
@@ -103,3 +85,34 @@
 			}
 		}
 	}
+
+@include breakpoint(xsmall) {
+	body {
+		padding-top: 0;
+	}
+
+	#header {
+		display: none;
+	}
+
+	.text-border, .text-shadow {
+		text-shadow: none;
+		color: _palette(fg);
+	}
+
+	.main.fullscreen {
+		min-height: auto;
+	}
+	.main {
+		&.style1,
+		&.style2 {
+			margin-top: 1rem;
+			background-image: none !important;
+			flex-direction: column;
+			padding: 1rem;
+		}
+	}
+	.anchored {
+		display: none;
+	}
+}
