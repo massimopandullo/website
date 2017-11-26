@@ -110,6 +110,10 @@
 			background-image: none !important;
 			flex-direction: column;
 			padding: 1rem;
+			align-items: center;
+		}
+		&.style1 > .content {
+			margin-bottom: 1rem;
 		}
 	}
 	.anchored {
