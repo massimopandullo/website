@@ -75,7 +75,10 @@
 					<!-- Gallery  -->
 						<div class="gallery">
               <% dato.lavori.lista_lavori.each_with_index do |lavoro, index| %>
-								<a href="<%= lavoro.image.url %>" class="image fit"><img src="<%= lavoro.image.url(fit: 'clip', w: 800, h: 800) %>" title="<%= lavoro.description %>" alt="" /></a>
+								<% image_url = lavoro.image.url(fit: 'clip', w: 1024, h: 1024) %>
+								<a href="<%= image_url %>" class="image fit">
+									<img src="<%= image_url %>" title="<%= lavoro.description %>" alt="" />
+								</a>
               <% end %>
 						</div>
 
