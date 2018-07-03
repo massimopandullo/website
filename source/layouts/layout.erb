@@ -20,7 +20,7 @@
 						<li><a href="#intro">Home</a></li>
 						<li><a href="#one"><%= dato.cosa_faccio.title %></a></li>
 						<li><a href="#two"><%= dato.chi_sono.title %></a></li>
-						<li><a href="#work"><%= dato.lavori.title %></a></li>
+						<li><a href="#work"><%= dato.work_section.title %></a></li>
 						<li><a href="#contact"><%= dato.contattami.title %></a></li>
 					</ul>
 				</nav>
@@ -68,13 +68,13 @@
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2><%= dato.lavori.title %></h2>
-						<%= dato.lavori.description %>
+						<h2><%= dato.work_section.title %></h2>
+						<%= dato.work_section.description %>
 					</header>
 
 					<!-- Gallery  -->
 						<div class="gallery">
-              <% dato.lavori.lista_lavori.each_with_index do |lavoro, index| %>
+              <% dato.work_section.works.each_with_index do |lavoro, index| %>
 								<% image_url = lavoro.image.url(fit: 'clip', w: 1024, h: 1024) %>
 								<a href="<%= image_url %>" class="image fit">
 									<img src="<%= image_url %>" title="<%= lavoro.description %>" alt="" />
